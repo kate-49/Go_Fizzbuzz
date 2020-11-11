@@ -5,7 +5,9 @@ import "strconv"
 func Sum(number int) string {
 	var answer string
 
-	if number%3 == 0 {
+	if number%15 == 0 {
+		answer = "Fizzbuzz"
+	} else if number%3 == 0 {
 		answer = "Fizz"
 	} else if number%5 == 0 {
 		answer = "Buzz"
