@@ -9,9 +9,7 @@ func TestSum(t *testing.T) {
 		got := Sum(3)
 		want := "Fizz"
 
-		if got != want {
-			t.Errorf("got %s want %s", got, want)
-		}
+		assertEquals(t, got, want)
 	})
 
 	t.Run("Test for Buzz", func(t *testing.T) {
@@ -19,9 +17,7 @@ func TestSum(t *testing.T) {
 		got := Sum(5)
 		want := "Buzz"
 
-		if got != want {
-			t.Errorf("got %s want %s", got, want)
-		}
+		assertEquals(t, got, want)
 	})
 
 	t.Run("Test for normal integer", func(t *testing.T) {
@@ -29,9 +25,12 @@ func TestSum(t *testing.T) {
 		got := Sum(4)
 		want := "4"
 
-		if got != want {
-			t.Errorf("got %s want %s", got, want)
-		}
+		assertEquals(t, got, want)
 	})
+}
 
+func assertEquals(t *testing.T, got string, want string) {
+	if got != want {
+		t.Errorf("got %s want %s", got, want)
+	}
 }
