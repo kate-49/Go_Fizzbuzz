@@ -24,4 +24,14 @@ func TestSum(t *testing.T) {
 		}
 	})
 
+	t.Run("Test for normal integer", func(t *testing.T) {
+
+		got := Sum(4)
+		want := "4"
+
+		if got != want {
+			t.Errorf("got %s want %s", got, want)
+		}
+	})
+
 }
