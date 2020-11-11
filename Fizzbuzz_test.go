@@ -10,7 +10,7 @@ func TestSum(t *testing.T) {
 		want := "Fizz"
 
 		if got != want {
-			t.Errorf("got %d want %d given, %s", got, want)
+			t.Errorf("got %s want %s", got, want)
 		}
 	})
 
