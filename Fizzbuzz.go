@@ -1,5 +1,11 @@
 package fizzbuzz
 
-func Sum(numbers int) string {
-	return "Fizz"
+func Sum(number int) string {
+	var answer string
+
+	if number == 3 {
+		answer = "Fizz"
+	}
+
+	return answer
 }
